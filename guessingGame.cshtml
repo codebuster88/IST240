@@ -1,0 +1,28 @@
+<html>
+<body> 
+@{
+if (IsPost) { 
+string guessnum = Request["Guess"]; 
+string answer = Request["Answer"]; 
+
+if (guessnum != answer){
+    <p> Your guess is wrong! <p>
+
+    <p>You entered: <br/>
+    Guess: @guessnum <br/>
+    Contact Name: @answer </p>
+}
+}
+else
+{
+<form method="post" action="">
+Company Name:<br />
+<input type="text" name="CompanyName" value="" /><br />
+Contact Name:<br />
+<input type="text" name="ContactName" value="" /><br /><br />
+<input type="submit" value="Submit" class="submit" />
+</form>
+}
+} 
+</body> 
+</html>
