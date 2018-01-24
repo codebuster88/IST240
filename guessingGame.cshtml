@@ -3,11 +3,13 @@
     @{
 
         if (IsPost) { 
-        int number;
-        int guessnum = Request["Guess"]; 
-        int answer = Session["Answer"]; 
+        Random rnd = new Random();
+        string guessnum = Request["Guess"]; 
+        int answer = rnd.next(1,1000);
+        Session ("realAnswer") = answer ;
         
-        if (guessnum != answer){
+        Convert.ToInt32(guessnum);
+        if (guessnum != Session("realAnswer"){
 
             <p> @guessnum is incorrect! </p>
 
