@@ -1,18 +1,17 @@
 <html>
 <body> 
     @{
-
-        if (IsPost) { 
         Random rnd = new Random();
-        string guessnum = Request["Guess"]; 
         int answer = rnd.Next(1,1000);
-        Session("realAnswer") = answer ;
+
+        if (IsPost) {
+        var guessnum = Request["Guess"]; 
+        Session["realAnswer"] = answer;
         
-        Convert.ToInt32(guessnum);
-        if (guessnum != Session("realAnswer")){
+        //Convert.ToInt32(guessnum);
+        if (guessnum.AsInt() != Session["realAnswer"]){
 
             <p> @guessnum is incorrect! </p>
-
             <input type="number" name="Guess" value="">Try again: </input>
    
         }
