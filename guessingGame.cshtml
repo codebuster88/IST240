@@ -8,7 +8,7 @@
             Session["realAnswer"] = answer;
         }
 
-        else if (IsPost) {
+        if (IsPost) {
         var guessnum = Request["Guess"]; 
         
         if (guessnum.AsInt() != Convert.ToInt32(Session["realAnswer"])){
