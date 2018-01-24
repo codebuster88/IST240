@@ -11,8 +11,11 @@
         //Convert.ToInt32(guessnum);
         if (guessnum.AsInt() != Convert.ToInt32(Session["realAnswer"])){
 
-            <p> @guessnum is incorrect! </p>
-            <input type="number" name="Guess" value="">Try again: </input>
+            <form method="post" action="" ><p> @guessnum is incorrect! </p> <br/>Try again:
+                <input type="number" name="Guess" value=""/> 
+                <input type="submit" value="Submit" class="submit" /> 
+            </form>
+            
    
         }
 
