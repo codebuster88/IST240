@@ -1,8 +1,10 @@
+        @{Random rnd = new Random();
+        int answer = rnd.Next(1,1000);
+        }
 <html>
 <body> 
     @{
-        Random rnd = new Random();
-        int answer = rnd.Next(1,1000);
+        
         Session["realAnswer"] = answer;
 
         if (IsPost) {
