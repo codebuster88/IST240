@@ -3,7 +3,6 @@
     @{
         Random rnd = new Random();
         int answer = rnd.Next(1,1000);
-        console.log(answer);
 
         if (IsPost) {
         var guessnum = Request["Guess"]; 
@@ -20,16 +19,7 @@
         else {
             <p> @guessnum is Correct</p>
         }
-        }
-    // else if(guessnum != answer){
-    //     <p> Your guess is wrong! </p>
-
-    //         // <p>You entered: <br/>
-    //         // Guess: @guessnum <br/>
-    //         // Contact Name: @answer </p>
-
-    // }
-        
+        }  
         
     
     else
@@ -42,6 +32,8 @@
     <input type="submit" value="Submit" class="submit" />
     </form>
     }
+
+    @answer
 } 
 </body> 
 </html>
