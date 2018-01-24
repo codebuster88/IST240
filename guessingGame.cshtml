@@ -1,13 +1,15 @@
-        @{Random rnd = new Random();
-        int answer = rnd.Next(1,1000);
+        @{
         }
 <html>
 <body> 
-    @{
-        
-        Session["realAnswer"] = answer;
+    @{ 
+        if(Session["realAnswer"]){
+            Random rnd = new Random();
+            int answer = rnd.Next(1,50);
+            Session["realAnswer"] = answer;
+        }
 
-        if (IsPost) {
+        else if (IsPost) {
         var guessnum = Request["Guess"]; 
         
         if (guessnum.AsInt() != Convert.ToInt32(Session["realAnswer"])){
