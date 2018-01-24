@@ -3,8 +3,9 @@
     @{
 
         if (IsPost) { 
-        string guessnum = Request["Guess"]; 
-        string answer = Request["Answer"]; 
+        int number;
+        int guessnum = Request["Guess"]; 
+        int answer = Session["Answer"]; 
         
         if (guessnum != answer){
 
@@ -16,6 +17,7 @@
 
         else (guessnum == answer){
             <p> @guessnum is Correct</p>
+
         }
         }
     // else if(guessnum != answer){
