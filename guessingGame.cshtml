@@ -3,12 +3,11 @@
     @{
         Random rnd = new Random();
         int answer = rnd.Next(1,1000);
+        Session["realAnswer"] = answer;
 
         if (IsPost) {
         var guessnum = Request["Guess"]; 
-        Session["realAnswer"] = answer;
         
-        //Convert.ToInt32(guessnum);
         if (guessnum.AsInt() != Convert.ToInt32(Session["realAnswer"])){
 
             <form method="post" action="" ><p> @guessnum is incorrect! </p> <br/>Try again:
