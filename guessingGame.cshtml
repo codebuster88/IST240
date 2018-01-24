@@ -3,7 +3,7 @@
 <html>
 <body> 
     @{ 
-        if(Session["realAnswer"]){
+        if(Session["realAnswer"] == null){
             Random rnd = new Random();
             int answer = rnd.Next(1,50);
             Session["realAnswer"] = answer;
