@@ -6,7 +6,7 @@
         Random rnd = new Random();
         string guessnum = Request["Guess"]; 
         int answer = rnd.Next(1,1000);
-        Session ("realAnswer") = answer ;
+        Session("realAnswer") = answer ;
         
         Convert.ToInt32(guessnum);
         if (guessnum != Session("realAnswer")){
