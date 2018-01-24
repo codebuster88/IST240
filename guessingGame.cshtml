@@ -5,7 +5,7 @@
         if (IsPost) { 
         Random rnd = new Random();
         string guessnum = Request["Guess"]; 
-        int answer = rnd.next(1,1000);
+        int answer = rnd.Next(1,1000);
         Session ("realAnswer") = answer ;
         
         Convert.ToInt32(guessnum);
