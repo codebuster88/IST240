@@ -9,7 +9,7 @@
         Session["realAnswer"] = answer;
         
         //Convert.ToInt32(guessnum);
-        if (guessnum.AsInt() != Session["realAnswer"].AsInt()){
+        if (guessnum.AsInt() != Convert.ToInt32(Session["realAnswer"])){
 
             <p> @guessnum is incorrect! </p>
             <input type="number" name="Guess" value="">Try again: </input>
