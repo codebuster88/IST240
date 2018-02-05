@@ -75,6 +75,7 @@ h2 {
 
 h3 {
     font-size: 1.2em;
+    text-align: center;
 }
 
 h4 {
@@ -328,6 +329,10 @@ aside {
     font-weight: 700;
 }
 
+p {
+    text-align: center;
+}
+
 /* login page */
 #loginForm {
     border-right: solid 2px #c8c8c8;
@@ -431,7 +436,8 @@ input, textarea {
     font-size: 1.2em;
     margin: 5px 0 6px 0;
     padding: 5px;
-    width: 300px;
+    width: 2.5em;
+    height: auto;
 }
 
 textarea {
@@ -451,7 +457,7 @@ textarea {
 
     input[type="submit"],
     input[type="button"],
-    button {
+    button     {
         background-color: #d3dce0;
         border: 1px solid #787878;
         cursor: pointer;
@@ -459,8 +465,10 @@ textarea {
         font-weight: 600;
         padding: 7px;
         margin-right: 8px;
-        width: auto;
+        width: auto;     
     }
+
+
 
     td input[type="submit"],
     td input[type="button"],
